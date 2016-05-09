@@ -1,12 +1,12 @@
 package com.kalvinlam.funfacts;
 
-import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class FunFactsActivity extends AppCompatActivity {
     private FactBook mFactBook = new FactBook();
@@ -30,15 +30,17 @@ public class FunFactsActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String fact = mFactBook.getFact();
-                String color = mColorWheel.getColor();
+                int color = mColorWheel.getColor();
 
                 // Update TextView to show this new fact
                 mFactTextView.setText(fact);
                 mRelativeLayout.setBackgroundColor(color);
+                mShowFactButton.setTextColor(color);
 
             }
         };
         mShowFactButton.setOnClickListener(listener);
 
+        Toast.makeText(FunFactsActivity.this, "Yay! Our activity was created!", Toast.LENGTH_SHORT).show();
     }
 }
