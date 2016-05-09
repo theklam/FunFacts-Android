@@ -16,7 +16,6 @@ public class FactBook {
                 "On average, it takes 66 days to form a new habit.",
                 "Mammoths still walked the earth when the Great Pyramid was being built." };
 
-        // The button was clicked, so update the fact TextView with a new fact
         String fact = "";
 
         // Randomly select a fact

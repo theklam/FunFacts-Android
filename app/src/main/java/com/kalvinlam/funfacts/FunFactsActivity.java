@@ -6,9 +6,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.Random;
-
 public class FunFactsActivity extends AppCompatActivity {
+    private FactBook mFactBook = new FactBook();
     // Declare our View variables
     private TextView mFactTextView;
     private Button mShowFactButton;
@@ -27,7 +26,7 @@ public class FunFactsActivity extends AppCompatActivity {
             public void onClick(View v) {
 
                 // Update TextView to show this new fact
-                mFactTextView.setText(fact);
+                mFactTextView.setText(mFactBook.getFact());
 
             }
         };
